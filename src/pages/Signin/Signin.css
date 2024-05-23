@@ -1,0 +1,38 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .form-field {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.2em solid var(--main);
+    background: rgba(#e91e63, 0.2);
+    border-radius: 0.2em 0.2em 0 0;
+    padding: 0.4em;
+    color: var(--main);
+
+    font-size: large;
+    padding: 1rem;
+  }
+
+  .form-button {
+    appearance: none;
+    border: 0.2em solid #e91e63;
+    background: hsl(0 0 0/0);
+    padding: 0.85em 1.5em;
+    color: #e91e63;
+    border-radius: 2em;
+    transition: 1s;
+
+    font-size: large;
+    padding: 1rem;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #e91e63;
+      color: #fff;
+    }
+  }
+}
