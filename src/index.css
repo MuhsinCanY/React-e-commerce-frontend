@@ -11,15 +11,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --main: #e91e63;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--main);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--main);
 }
 
 body {
@@ -46,9 +48,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -65,4 +65,50 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+
+    width: 300px;
+    height: 300px;
+    color: var(--main);
+    background-color: #1a1a1a90;
+    border: 5px var(--main) solid;
+
+    cursor: pointer;
+  }
+}
+
+.store-button {
+  appearance: none;
+  border: 0.2em solid #e91e63;
+  background: hsl(0 0 0/0);
+  padding: 0.85em 1.5em;
+  color: #e91e63;
+  border-radius: 2em;
+  transition: 1s;
+
+  font-size: medium;
+  padding: 1rem;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #e91e63;
+    color: #fff;
+  }
+}
+
+.product-cart-container {
+  display: flex;
+  gap: 2rem;
 }
