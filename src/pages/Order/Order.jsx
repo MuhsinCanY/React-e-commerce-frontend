@@ -6,12 +6,16 @@ export default function Order() {
 
   const fetchCart = () => {
     axios
-      .get('http://localhost:8080/v1/store/cart/customer/1234', {
-        auth: {
-          username: localStorage.getItem('email'),
-          password: localStorage.getItem('password'),
-        },
-      })
+      .get(
+        'http://localhost:8080/v1/store/cart/customer/' +
+          localStorage.getItem('email'),
+        {
+          auth: {
+            username: localStorage.getItem('email'),
+            password: localStorage.getItem('password'),
+          },
+        }
+      )
       .then((res) => {
         setCart(res.data)
       })
