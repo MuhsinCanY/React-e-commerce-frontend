@@ -1,0 +1,14 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid var(--main);
+
+  .product {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    gap: 2rem;
+  }
+}

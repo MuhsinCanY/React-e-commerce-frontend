@@ -1,0 +1,25 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid var(--main);
+}
+
+.complete-button {
+  appearance: none;
+  border: 0.2em solid #fff;
+  background: #e91e63;
+  padding: 0.85em 1.5em;
+  color: #fff;
+  border-radius: 2em;
+  transition: 1s;
+
+  font-size: medium;
+  padding: 1rem;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fff;
+    color: #e91e63;
+  }
+}
