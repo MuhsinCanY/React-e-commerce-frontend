@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react'
 import './Cart.css'
 import '../Products/Product.css'
 import axios from 'axios'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 export default function Cart({ cart, setCart, fetchCart }) {
+  const history = useHistory()
+
   useEffect(() => {
     fetchCart()
   }, [])
@@ -25,6 +28,7 @@ export default function Cart({ cart, setCart, fetchCart }) {
     <div>
       <h1>Cart</h1>
       <div className="product-container">
+        {cart.length === 0 ? <h2>Your cart is empty!</h2> : <p></p>}
         {cart.map((item) => (
           <div className="product" key={item.id}>
             <h2>{item.product.name}</h2>
@@ -44,7 +48,12 @@ export default function Cart({ cart, setCart, fetchCart }) {
         <h2>
           Total: {cart.reduce((a, b) => a + b.product.price * b.count, 0)} $
         </h2>
-        <button className="complete-button">Complete Order</button>
+        <button
+          className="complete-button"
+          onClick={() => history.push('/order')}
+        >
+          Complete Order
+        </button>
       </div>
     </div>
   )

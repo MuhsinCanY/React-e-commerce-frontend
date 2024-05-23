@@ -110,5 +110,5 @@ button:focus-visible {
 
 .product-cart-container {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
 }

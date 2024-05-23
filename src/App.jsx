@@ -6,6 +6,7 @@ import Signin from './pages/Signin/Signin'
 import Login from './pages/Login/Login'
 import Welcome from './pages/Home/Home'
 import Main from './pages/Main/Main'
+import Order from './pages/Order/Order'
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,10 @@ function App() {
 
         <Route path="/products">
           <Main />
+        </Route>
+
+        <Route path="/order">
+          <Order />
         </Route>
       </Switch>
     </>
